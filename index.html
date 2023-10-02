@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <title>Drag & Drop To-Do List</title>
+</head>
+<body>
+    <div id="container">
+        <h1>To-Do List</h1>
+        <div id="add-task">
+            <input type="text" id="task-name" placeholder="Add a new task">
+            <button id="add-button">Create</button>
+        </div>
+        <div id="open" class="droppable" ondrop="drop(event, 'open')" ondragover="allowDrop(event)">
+            <h2>Open</h2>
+        </div>
+        <div id="in-progress" class="droppable" ondrop="drop(event, 'in-progress')" ondragover="allowDrop(event)">
+            <h2>In Progress</h2>
+        </div>
+        <div id="completed" class="droppable" ondrop="drop(event, 'completed')" ondragover="allowDrop(event)">
+            <h2>Completed</h2>
+        </div>
+    </div>
+    <div id="json-data" style="display: none;"></div>
+
+    <script src="./src/js/app.js"></script>
+</body>
+</html>
